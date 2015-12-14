@@ -1,0 +1,100 @@
+.global-nav {
+	background: white;
+	position: relative;
+	// Override pat-bumper left value:
+	left: 0 !important;
+	z-index: 5;
+	text-align: left;
+	font-size: 1.3rem;
+	padding: 0.5em 0;
+	transition: background-color 4s;
+
+	li {
+		display: inline-block;
+		padding: 0 1em 0 0;
+		margin-left: 0 !important;
+    	color: rgba(0,0,0,0.7);
+
+    	&.languages {
+    		position: absolute;
+			right: 50%;
+			top: 4em;
+			-moz-transform: translateX(50%);
+			-webkit-transform: translateX(50%);
+			transform: translateX(50%);
+
+			a {
+				width: 2.2em;
+				height: 2.6em;
+				margin: 0 0.3em;
+				line-height: 2.6em;
+				text-align: center;
+				border: 1px rgba(0,0,0,0.6) solid;
+				border-radius: 50%;
+
+				&:hover {
+					background-color: rgba(0,0,0,0.2);
+				}
+
+				&.current {
+					background-color: rgba(255,255,255,0.6);
+					color: rgba(0,0,0,0.4);
+					border-color: transparent;
+				}
+			}
+    	}
+	}
+
+	&.bumped {
+		background-color: #666;
+
+		li {
+			&.languages {
+				right: 1%;
+				top: 0.85em;
+				font-size: 0.6em;
+
+				-moz-transform: translateX(0);
+				-webkit-transform: translateX(0);
+				transform: translateX(0);
+
+			}
+		}
+	}
+
+	a {
+		display: inline-block;
+		font-weight: 200;
+    	color:  rgba(0,0,0,0.6);
+
+    	&.current {
+    		color: black;
+			font-weight: 300;
+    	}
+	}
+}
+
+#home .global-nav {
+	top: 50%;
+
+	@media screen and (max-width: $tablet) {
+		// disable bumper for cell phones (Not enough screen estate)
+		top: 50% !important;
+	}
+}
+
+.sub-page {
+	.global-nav {
+		li {
+			&.languages {
+				right: 1%;
+				top: 0.85em;
+				font-size: 0.6em;
+
+				-moz-transform: translateX(0);
+				-webkit-transform: translateX(0);
+				transform: translateX(0);
+			}
+		}
+	}
+}

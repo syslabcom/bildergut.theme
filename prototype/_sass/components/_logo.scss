@@ -1,0 +1,22 @@
+.logo {
+	
+	&#site-logo {
+		overflow: hidden;
+		text-indent: -1000px;
+		width: 200px;
+		margin: -100px 0 0 -100px;
+		height: 500px;
+		background: url(logo.svg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+
+		@media screen and (min-width: $tablet) {
+			width: 600px;
+			height: 150px;
+			margin: -170px 0 0 -300px;
+		}
+	}
+}

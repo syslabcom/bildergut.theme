@@ -1,0 +1,39 @@
+title: Bildergut
+author: "Kern & Kern"
+domain: www.bildergut.com
+media: /media
+markdown: kramdown
+permalink: /:title
+sass:
+  # style: :compressed
+  load_paths:
+    - "_sass"
+    - "patternslib"
+    - "patternslib/_sass"
+exclude: 
+  - Gemfile
+  - Gemfile.lock
+  - config.codekit
+  - config.rb
+  - node_modules
+  - patternslib/src/bower_components
+  - patternslib/node_modules
+  - Makefile
+  - README.md
+  - bower.json
+  - main.js
+  - bundle-config.js
+  - src/
+  - stamp-bower
+  - stamp-npm
+  - stamp-bundler
+patterns:
+  - version: 2.0.13
+  - components:
+    - modal
+    - avatar
+    - equaliser
+    - grid
+  - basics: 
+    - reset
+    - clear-fix

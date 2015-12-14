@@ -1,0 +1,36 @@
+{
+  "name": "myproject",
+  "version": "2.0.12",
+  "title": "My Project",
+  "description": "My project description.",
+  "author": {
+    "name": "Your name here"
+  },
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/url/to/your/project/tracker"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/url/to/your/project"
+  },
+  "devDependencies": {
+    "bower": "latest",
+    "generator-patternslib": "0.2.1",
+    "http-server": "^0.7.5",
+    "jshint": "~0.9.1",
+    "pegjs": "0.7.0",
+    "phantom-jasmine": "0.1.8",
+    "phantomjs": "^1.9.18",
+    "requirejs": "",
+    "yo": "^1.4.8"
+  },
+  "homepage": "https://your.project.homepage.com",
+  "docs": "http://your.docs/",
+  "maintainers": [
+    {
+      "name": "Your Name",
+      "url": "http://your.url"
+    }
+  ]
+}

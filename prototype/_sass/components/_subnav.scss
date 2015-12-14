@@ -1,0 +1,82 @@
+.subnav {
+  z-index: 10;
+  opacity: 0.9;
+  background-color: #666;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+
+  &.bumped {
+    border-bottom: 1px white solid;
+
+    &.sticky-supported {
+      @media screen and (-webkit-min-device-pixel-ratio:0) {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 0.01em !important;
+      }
+    }
+
+    .tabs.container {
+      width: 100%;
+    }
+  }
+
+  .tabs {
+    padding: 0;
+    max-width: 100%;
+
+    @include screen-size(small-medium) {
+      width: 100%;
+    }
+
+    @include screen-size(large) {
+      width: calc(1100px - 4em);
+      -moz-transition: width 0.4s;
+      -webkit-transition: width 0.4s;
+      transition: width 0.4s;
+    }
+
+    &.container {
+      padding: 0;
+    }
+
+    margin-bottom: -1px;
+    border-bottom: 1px white solid;
+
+    a {
+      float: left;
+
+      strong {
+        font-weight: bold;
+      }
+
+      &.current {
+        border-bottom: 0.2rem white solid;
+        padding-bottom: 0;
+      }
+
+      &.icon {
+        width: 1.3em;
+        float: right;
+        overflow: hidden;
+        margin-right: 1em;
+        white-space: nowrap;
+        padding-left: 0;
+        padding-right: 0;
+
+        &:before {
+          width: 1.5em;
+          float: left;
+          font-family: fontello;
+          content: '\2302';
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+.sub-page .subnav {
+  margin-bottom: 1em;
+}

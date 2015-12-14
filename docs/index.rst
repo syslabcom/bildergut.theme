@@ -1,0 +1,5 @@
+====================
+bildergut.theme
+====================
+
+User documentation

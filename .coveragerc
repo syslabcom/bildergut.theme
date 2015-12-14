@@ -1,0 +1,6 @@
+[report]
+include =
+    src/bildergut/*
+omit =
+    */test*
+    */upgrades/*

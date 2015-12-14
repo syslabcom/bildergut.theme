@@ -1,0 +1,75 @@
+// body
+
+body {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.4em;
+	//background: pink;
+}
+
+img {
+	margin: 0;
+}
+
+p {
+	margin: 0 0 1.5em 0;
+}
+
+
+// masonry
+
+.pat-masonry .columns {
+    margin-bottom: 0.5em;
+}
+
+// subnavigation
+
+.subnav {
+  background-color: #fff;
+  padding: .5em 2em;
+
+  &.bumped {
+    border-bottom: none;
+  }
+}
+
+.tabs {
+	> a {
+		font-size: 0.8em;
+		padding-top: .5em;
+
+		&:hover,&.current {
+			text-decoration: none;
+			color: #666;
+		}
+	}
+}
+
+.tabs .home {
+	padding-top: 50px;
+	padding-right: 180px;
+	background-image: url(/media/head_white1.png);
+	background-repeat: no-repeat;
+}
+
+section {
+
+  .container {
+    padding: 1em 7rem 2em 2em;
+  }
+
+  .people-cloud .person {
+  	padding: 0 0;
+  }
+
+  .people-cloud .person figcaption {
+  	text-align: left;
+  }
+}
+
+
+// footer
+
+#footer {
+    margin: 0 2em;
+}

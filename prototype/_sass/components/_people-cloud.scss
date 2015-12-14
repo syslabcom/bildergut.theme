@@ -1,0 +1,42 @@
+.people-cloud {
+	text-align: center;
+	padding: 0 0 2em 0;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	@include clear-fix();
+
+	.person {
+		margin: 0 0 3em;
+		padding: 0 3%;
+		float: left;
+		@include box-sizing();
+
+		@include screen-size(large) {
+			width: 33.333332%;
+		}
+
+		@include screen-size(medium) {
+			width: 50%;
+		}
+
+		vertical-align: top;
+
+		figcaption {
+			text-align: center;
+			font-style: italic;
+
+			strong {
+				display: block;
+				font-size: 1.4em;
+				font-style: normal;
+				margin-bottom: 0.5rem;
+			}
+		}		
+
+		img {
+			margin-bottom: 1em;
+			//border-radius: 50%;
+			margin-bottom: 1.5em;
+		}
+	}
+}
