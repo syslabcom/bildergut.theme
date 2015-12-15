@@ -22,11 +22,13 @@ exclude:
   - README.md
   - bower.json
   - main.js
+  - build.js
   - bundle-config.js
   - src/
   - stamp-bower
   - stamp-npm
   - stamp-bundler
+  - package.json
 patterns:
   - version: 2.0.13
   - components:
