@@ -48,6 +48,7 @@ setup(
         'z3c.jbot',
         'plone.app.theming',
         'plone.app.themingplugins',
+        'ploneintranet.themeswitcher',
     ],
     extras_require={
         'test': [

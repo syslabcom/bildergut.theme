@@ -40,7 +40,7 @@
       css:theme-children="html body"
       />
  -->
-    <replace css:content-children="#content-core" css:theme-children=".container" />
+    <replace css:content-children="#body-core" css:theme-children="#body-core" />
 
   </rules>
 

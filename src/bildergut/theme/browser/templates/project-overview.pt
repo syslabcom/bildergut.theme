@@ -7,29 +7,56 @@
       i18n:domain="plone">
 
 <body>
-  <metal:content-core fill-slot="content-core" tal:define="projects view/prepprojects">
+  <metal:content-core fill-slot="content-core" 
+                      tal:define="projects view/prepprojects;
+                                  portal context/portal_url/getPortalObject;
+                                  portal_url portal/absolute_url">
 
-    <ul id="project-filter" class="global-nav">
-        <li><a href="#" >All</a></li>
-        <li><a href="#" class="current">CGI</a></li>
-        <li><a href="#">Automobil</a></li>
-        <li><a href="#">Landscape</a></li>
-        <li><a href="#">Portrait</a></li>
-        <li><a href="#">Advertising</a></li>
-        <li><a href="#">Editorial</a></li>
-    </ul>
-    <tal:rep repeat="project projects">
-      <tal:block define="imgs python:project['imgs']; width python:project['width']">
 
-        <div class="project" tal:attributes="id python:project['id']; onmouseover python:'showme(\''+project['id']+'\')'; style string:width: ${width}px">
-          <tal:repimg repeat="img imgs">
-                     <img tal:attributes="alt img/Title; src string:${img/absolute_url}/@@images/image/project_thumb; height string:160; width string:${width}" />
-          </tal:repimg>
-        </div>
+    <div class="subnav pat-bumper">
+        <nav class="container navigation tabs">
+          <a href="/" class="home"></a>
+              <a href="${portal_url}/about">ABOUT</a>
+              <a href="${portal_url}/contact">CONTACT</a>
+              <a href="${portal_url}/clients">CLIENTS</a>
+        </nav>
+    </div>
 
-      </tal:block>
-    </tal:rep>
+    <div class="container" id="body-core">
+
+      <ul id="project-filter" class="global-nav">
+          <li><a href="${portal_url}" class="current" tal:attributes="class python:not request.get('cat', None) and 'current' or ''">All</a></li>
+
+          <li tal:repeat="cat view/categories" >
+            <a href="${portal_url}?cat=${cat/getId}" 
+               tal:content="cat/Title" 
+               tal:attributes="class python:request.get('cat', None) == cat.getId and 'current' or ''">CGI</a>
+          </li>
+      </ul>
+
+
+      <div class="tiles row pat-masonry" data-pat-masonry="gutter: 0px; item-selector: .tile;">
+        <tal:rep repeat="project projects">
+
+          <tal:block define="imgs python:project['imgs']; width python:project['width']">
+           
+              <div class="columns item pat-gallery">
+                <a tal:define="firstimg python:imgs[0]" href="http://www.bildergut.com/main/simon-ese-sommer-16/SimonEse_SS16_look28903%20copy.jpg/image_project_large" tal:attributes="title firstimg/Title; href string:${firstimg/absolute_url}/@@images/image/project_large">
+                  <img src="SimonEse_SS16.jpg/image_project_thumb" alt="SimonEse" 
+                    tal:attributes="alt firstimg/Title; src string:${firstimg/absolute_url}/@@images/image/project_thumb; height string:160; width string:${width}" />
+                </a>
+                <tal:repimg repeat="img python:imgs[1:]">
+                    <a href="SimonEse_.jpg/image_project_large" tal:attributes="title img/Title; href string:${img/absolute_url}/@@images/image/project_large"></a>
+                </tal:repimg>
+
+              </div>
+
+
+          </tal:block>
+        </tal:rep>
+      </div>
+    </div>
+
   </metal:content-core>
-
 </body>
 </html>
