@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+  <metal:content-core fill-slot="content-core" tal:define="projects view/prepprojects">
+
+    <ul id="project-filter" class="global-nav">
+        <li><a href="#" >All</a></li>
+        <li><a href="#" class="current">CGI</a></li>
+        <li><a href="#">Automobil</a></li>
+        <li><a href="#">Landscape</a></li>
+        <li><a href="#">Portrait</a></li>
+        <li><a href="#">Advertising</a></li>
+        <li><a href="#">Editorial</a></li>
+    </ul>
+    <tal:rep repeat="project projects">
+      <tal:block define="imgs python:project['imgs']; width python:project['width']">
+
+        <div class="project" tal:attributes="id python:project['id']; onmouseover python:'showme(\''+project['id']+'\')'; style string:width: ${width}px">
+          <tal:repimg repeat="img imgs">
+                     <img tal:attributes="alt img/Title; src string:${img/absolute_url}/@@images/image/project_thumb; height string:160; width string:${width}" />
+          </tal:repimg>
+        </div>
+
+      </tal:block>
+    </tal:rep>
+  </metal:content-core>
+
+</body>
+</html>

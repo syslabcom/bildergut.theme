@@ -17,4 +17,13 @@
       directory="static"
       />
 
+  <browser:page
+    for="*"
+    name="project-overview"
+    class=".views.ProjectOverviewView"
+    permission="zope.Public"
+    layer="bildergut.theme.interfaces.IBildergutThemeLayer"
+    template="templates/project-overview.pt"
+  />
+
 </configure>
