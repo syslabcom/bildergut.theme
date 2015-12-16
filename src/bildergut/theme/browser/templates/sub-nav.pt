@@ -1,0 +1,10 @@
+    <div class="subnav pat-bumper" 
+         tal:define="portal context/portal_url/getPortalObject;
+                     portal_url portal/absolute_url">
+        <nav class="container navigation tabs">
+          <a href="${portal_url}" class="home"></a>
+              <a href="${portal_url}/about">ABOUT</a>
+              <a href="${portal_url}/contact">CONTACT</a>
+              <a href="${portal_url}/clients">CLIENTS</a>
+        </nav>
+    </div>

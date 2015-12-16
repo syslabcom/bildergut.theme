@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+  <metal:content-core fill-slot="content-core" 
+                      tal:define="portal context/portal_url/getPortalObject;
+                                  portal_url portal/absolute_url">
+
+    <div class="container" id="body-core">
+
+      <div class="tiles row pat-masonry" data-pat-masonry="gutter: 0px; item-selector: .tile;">
+          <div class="columns item" tal:repeat="client view/clients"><a href="#"><img tal:attributes="alt client/Title; src string:${client/getURL}/@@images/image/project_thumb;" src="generated/media/clients1.png" /></a></div>
+      </div>
+
+    </div>
+
+  </metal:content-core>
+</body>
+</html>
