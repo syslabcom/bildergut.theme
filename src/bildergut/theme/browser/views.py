@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from Products.Five import BrowserView
-# from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone.app.layout.viewlets.common import ViewletBase
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
 class ProjectOverviewView(BrowserView):
@@ -54,3 +55,19 @@ class ProjectOverviewView(BrowserView):
                          width=width))
 
         return projects
+
+
+class ClientsView(BrowserView):
+
+    def clients(self):
+        query = {'portal_type': 'Image',
+                 'sort_on': 'getObjPositionInParent'}
+        contents = self.context.getFolderContents(
+            query,
+            batch=True,
+            b_size=100)
+        return contents
+
+
+class SubNavViewlet(ViewletBase):
+    index = ViewPageTemplateFile('templates/sub-nav.pt')

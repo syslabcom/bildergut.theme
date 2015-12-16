@@ -7,7 +7,6 @@
   <!-- Apply the following rules to standard Plone pages -->
   <rules css:if-content="#visual-portal-wrapper">
 
-    <theme href="generated/index.html" />
 
     <!-- Replace title with Plone's page title  -->
     <replace
@@ -33,14 +32,28 @@
       css:content="body"
       css:theme="body"
       />
+    <replace css:content-children=".subnav" css:theme-children=".subnav" />
 
-    <!-- Copy script tags from Plone head to end of body -->
-<!--     <after
-      css:content="html head script"
-      css:theme-children="html body"
-      />
- -->
-    <replace css:content-children="#body-core" css:theme-children="#body-core" />
+
+    <rules css:if-content="body.portaltype-plone-site">
+      <theme href="generated/index.html" />
+      <replace css:content-children="#body-core" css:theme-children="#body-core" />
+    </rules>
+
+    <rules css:if-content="body.section-about">
+      <theme href="generated/about.html" />
+      <replace css:content-children="#content-core" css:theme-children="#body-core" />
+    </rules>
+
+    <rules css:if-content="body.section-contact">
+      <theme href="generated/contact.html" />
+      <replace css:content-children="#content-core" css:theme-children="#body-core" />
+    </rules>
+
+    <rules css:if-content="body.section-clients">
+      <theme href="generated/clients.html" />
+      <replace css:content-children="#content-core" css:theme-children="#body-core" />
+    </rules>
 
   </rules>
 

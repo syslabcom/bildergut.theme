@@ -13,14 +13,14 @@
                                   portal_url portal/absolute_url">
 
 
-    <div class="subnav pat-bumper">
+<!--     <div class="subnav pat-bumper">
         <nav class="container navigation tabs">
           <a href="/" class="home"></a>
               <a href="${portal_url}/about">ABOUT</a>
               <a href="${portal_url}/contact">CONTACT</a>
               <a href="${portal_url}/clients">CLIENTS</a>
         </nav>
-    </div>
+    </div> -->
 
     <div class="container" id="body-core">
 
