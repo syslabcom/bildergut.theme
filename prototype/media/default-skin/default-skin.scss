@@ -68,7 +68,7 @@
 .pswp__button,
 .pswp__button--arrow--left:before,
 .pswp__button--arrow--right:before {
-	background: url(/media/default-skin/default-skin.png) 0 0 no-repeat;
+	background: url(default-skin.png) 0 0 no-repeat;
 	background-size: 264px 88px;
 	width: 44px;
 	height: 44px;
@@ -80,7 +80,7 @@
     .pswp--svg .pswp__button,
     .pswp--svg .pswp__button--arrow--left:before,
 	.pswp--svg .pswp__button--arrow--right:before {
-        background-image: url(/media/default-skin/default-skin.svg);
+        background-image: url(default-skin.svg);
     }
 
     .pswp--svg .pswp__button--arrow--left,
@@ -396,7 +396,7 @@ a.pswp__share--download {
 
 	.pswp__preloader__icn {
 		/* We use .gif in browsers that don't support CSS animation */
-		background: url(/media/default-skin/preloader.gif) 0 0 no-repeat;
+		background: url(preloader.gif) 0 0 no-repeat;
 	}
 }
 
