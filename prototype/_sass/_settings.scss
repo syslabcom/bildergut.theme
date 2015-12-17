@@ -43,6 +43,9 @@ $tablet:768px;
 @import "libraries/mixins";
 @import "libraries/reset";
 @import "libraries/patterns/patterns";
+@import "libraries/patterns/libraries/photoswipe/_main-settings";
+@import "libraries/patterns/libraries/photoswipe/main";
+@import "libraries/patterns/libraries/photoswipe/default-skin/default-skin";
 
 // components
 @import "components/anchor";
