@@ -52,6 +52,7 @@ class ProjectOverviewView(BrowserView):
                 projects.append(
                     dict(id=folder.getId,
                          title=folder.Title,
+                         description=folder.Description,
                          imgs=imgobs,
                          width=width))
 
