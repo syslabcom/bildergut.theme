@@ -10101,6 +10101,45 @@ h2 {
 h3 {
   margin: 0 0 1rem 0; }
 
+#hamburger-desktop,
+#hamburger-mobile {
+  float: left;
+  height: 19px;
+  width: 19px;
+  text-indent: -100em;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: 6px; }
+  #hamburger-desktop:before,
+  #hamburger-mobile:before {
+    text-indent: 0;
+    content: "\e877";
+    font-family: fontello;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    font-size: 1em;
+    line-height: 1.8em;
+    color: #666; }
+
+#hamburger-mobile:before {
+  content: "\e878"; }
+
+@media only screen and (min-width: 1280px) {
+  #hamburger-mobile {
+    display: none; } }
+@media only screen and (max-width: 768px) {
+  #hamburger-desktop {
+    display: none; } }
+.gh-expanded #hamburger-desktop:before {
+  content: "\e878"; }
+
+.application-home #hamburger-desktop:before {
+  content: "\e878";
+  opacity: 0.5;
+  pointer-events: none; }
+
 html {
   height: 100%; }
 
@@ -10726,6 +10765,9 @@ img {
 p {
   margin: 0 0 1.5em 0; }
 
+.hidden {
+  display: none; }
+
 .pat-masonry .columns {
   margin-bottom: 0.5em;
   margin-right: 6px; }
@@ -10756,5 +10798,12 @@ section .people-cloud .person {
 section .people-cloud .person figcaption {
   text-align: left; }
 
+#project-filter li {
+  padding: 0.5em 1em 0.5em 0; }
+
+@media screen and (max-width: 768px) {
+  #project-filter li {
+    display: block;
+    border-bottom: 1px solid gray; } }
 #footer {
   margin: 0 2em; }
