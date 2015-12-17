@@ -44,7 +44,7 @@ _diazo:
 	@rm -rf $(DIAZO_DIR)/style/ && mkdir $(DIAZO_DIR)/style/
 	@cp -R $(RELEASE_DIR)/style/* $(DIAZO_DIR)/style/
 	@[ -d $(DIAZO_DIR)/media/ ] || mkdir $(DIAZO_DIR)/media/
-
+	@cp -R $(RELEASE_DIR)/media/* $(DIAZO_DIR)/media/
 
 
 
