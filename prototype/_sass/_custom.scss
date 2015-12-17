@@ -70,7 +70,15 @@ section {
   }
 }
 
-
+#project-filter li {
+    padding: 0.5em 1em 0.5em 0;
+}
+@media screen and (max-width: $tablet) {
+    #project-filter li {
+        display: block;
+        border-bottom: 1px solid gray;
+    }
+}
 // footer
 
 #footer {

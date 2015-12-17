@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+#hamburger-desktop,
+#hamburger-mobile {
+	float: left;
+	height: 19px;
+	width: 19px;
+	text-indent: -100em;
+	position: relative;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-right: 6px;
+
+	&:before {
+		text-indent: 0;
+		content: "\e877";
+		font-family: fontello;
+		position: absolute;
+		left: 10px;
+		top: 0;
+		font-size: 1em;
+		line-height: 1.8em;
+		color: $colour-header-elements;
+	}
+}
+
+#hamburger-mobile {
+	&:before {
+		content: "\e878";
+	}
+}
+
+@include screen-size(large) { 
+	#hamburger-mobile {
+		display: none;
+	}
+}
+
+@include screen-size(small) { 
+	#hamburger-desktop {
+		display: none;
+	}
+}
+
+.gh-expanded #hamburger-desktop {
+
+	&:before {
+		content: "\e878";
+	}
+}
+
+.application-home #hamburger-desktop {
+
+	&:before {
+		content: "\e878";
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
