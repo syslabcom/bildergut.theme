@@ -2,6 +2,7 @@
 from Products.Five import BrowserView
 from plone.app.layout.viewlets.common import ViewletBase
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from random import shuffle
 
 
 class ProjectOverviewView(BrowserView):
@@ -54,6 +55,7 @@ class ProjectOverviewView(BrowserView):
                          imgs=imgobs,
                          width=width))
 
+        shuffle(projects)
         return projects
 
 
