@@ -1,8 +1,6 @@
-RELEASE_DIR	= release/prototype/_site
+RELEASE_DIR	    = release/prototype/_site
 DIAZO_DIR       = src/bildergut/theme/theme/generated
-LATEST          = $(shell cat LATEST)
-BUNDLENAME      = bundle
-BUNDLEURL	= https://products.syslab.com/packages/$(BUNDLENAME)/$(LATEST)/$(BUNDLENAME)-$(LATEST).tar.gz
+BUNDLENAME      = bundle.min
 
 # Add help text after each target name starting with ' \#\# '
 help:
@@ -33,7 +31,7 @@ _diazo:
 	# point js sourcing to registered resource and rewrite all other generated sources to point to diazo dir
 	for file in `grep 'href="generated' $(DIAZO_DIR)/../rules.xml | cut -f2 -d\" | cut -f2- -d/`; do \
 		echo "Rewriting resource URLs in $$file"; \
-		sed -i -e 's#src=".*bundle.js"#src="generated/bundles/$(BUNDLENAME).js"#' $(RELEASE_DIR)/$$file; \
+		sed -i -e 's#src=".*bundle.min.js"#src="generated/bundles/$(BUNDLENAME).js"#' $(RELEASE_DIR)/$$file; \
 		sed -i -e 's#="/\(style\)/#="generated/\1/#g' $(RELEASE_DIR)/$$file; \
 		sed -i -e 's#="/\(media\)/#="generated/\1/#g' $(RELEASE_DIR)/$$file; \
 		mkdir -p `dirname $(DIAZO_DIR)/$$file`; \
