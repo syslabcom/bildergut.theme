@@ -55,6 +55,11 @@
       <replace css:content-children="#content-core" css:theme-children="#body-core" />
     </rules>
 
+    <rules css:if-content="body.section-photographers">
+      <theme href="generated/photographers.html" />
+      <replace css:content-children="#content-core" css:theme-children="#body-core" />
+    </rules>
+
   </rules>
 
 </rules>

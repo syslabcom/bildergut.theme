@@ -72,5 +72,17 @@ class ClientsView(BrowserView):
         return contents
 
 
+class PhotographersView(BrowserView):
+
+    def photographers(self):
+        query = {'portal_type': 'Document',
+                 'sort_on': 'getObjPositionInParent'}
+        contents = self.context.getFolderContents(
+            query,
+            batch=True,
+            b_size=100)
+        return contents
+
+
 class SubNavViewlet(ViewletBase):
     index = ViewPageTemplateFile('templates/sub-nav.pt')

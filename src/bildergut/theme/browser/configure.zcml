@@ -35,6 +35,15 @@
     template="templates/clients-overview.pt"
   />
 
+  <browser:page
+    for="*"
+    name="photographers-overview"
+    class=".views.PhotographersView"
+    permission="zope.Public"
+    layer="bildergut.theme.interfaces.IBildergutThemeLayer"
+    template="templates/photographers-overview.pt"
+  />
+
   <browser:viewlet
       name="bildergut.subnav"
       manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
