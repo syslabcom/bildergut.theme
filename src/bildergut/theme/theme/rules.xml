@@ -45,6 +45,11 @@
       <replace css:content-children="#content-core" css:theme-children="#body-core" />
     </rules>
 
+    <rules css:if-content="body.section-imprint">
+      <theme href="generated/imprint.html" />
+      <replace css:content-children="#content-core" css:theme-children="#body-core" />
+    </rules>
+
     <rules css:if-content="body.section-contact">
       <theme href="generated/contact.html" />
       <replace css:content-children="#content-core" css:theme-children="#body-core" />
