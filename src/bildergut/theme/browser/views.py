@@ -47,6 +47,9 @@ class ProjectOverviewView(BrowserView):
                     imgob = img.getObject()
                     imgobs.append(imgob)
 
+                if imgob == None:
+                    continue
+
                 width, height = imgob.image.getImageSize()
                 width = int(160.0 / height * width)
                 projects.append(
