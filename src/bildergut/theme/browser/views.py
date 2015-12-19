@@ -42,16 +42,17 @@ class ProjectOverviewView(BrowserView):
                      'sort_on': 'getObjPositionInParent'},
                     batch=True, b_size=100)
                 imgobs = []
-                imgob = None
+                img = None
                 for img in imgs:
-                    imgob = img.getObject()
-                    imgobs.append(imgob)
+                    imgobs.append(img)
 
-                if not imgob:
+                if not img:
                     continue
 
-                width, height = imgob.image.getImageSize()
+                width, height = img.getObject().image.getImageSize()
                 width = int(160.0 / height * width)
+                if height == -1:
+                    print img.getPath()
                 projects.append(
                     dict(id=folder.getId,
                          title=folder.Title,

@@ -32,14 +32,14 @@
           <tal:block define="imgs python:project['imgs']; width python:project['width']">
            
               <div class="columns item pat-gallery">
-                <a tal:define="firstimg python:imgs[0]" href="http://www.bildergut.com/main/simon-ese-sommer-16/SimonEse_SS16_look28903%20copy.jpg/image_project_large" tal:attributes="title firstimg/Title; href string:${firstimg/absolute_url}/@@images/image/project_large">
+                <a tal:define="firstimg python:imgs[0]" href="http://www.bildergut.com/main/simon-ese-sommer-16/SimonEse_SS16_look28903%20copy.jpg/image_project_large" tal:attributes="title firstimg/Title; href string:${firstimg/getURL}/@@images/image/project_large">
                   <img src="SimonEse_SS16.jpg/image_project_thumb" alt="SimonEse" 
-                    tal:attributes="alt firstimg/Title; src string:${firstimg/absolute_url}/@@images/image/project_thumb; height string:160; width string:${width}; title string: ${project/title} - ${project/description}" />
+                    tal:attributes="alt firstimg/Title; src string:${firstimg/getURL}/@@images/image/project_thumb; height string:160; width string:${width}; title string: ${project/title} - ${project/description}" />
                 </a>
                 <tal:repimg repeat="img python:imgs[1:]">
-                    <a href="SimonEse_.jpg/image_project_large" tal:attributes="title img/Title; href string:${img/absolute_url}/@@images/image/project_large">
-                      <img src="SimonEse_SS16.jpg/image_project_thumb" alt="SimonEse" class="hidden"
-                    tal:attributes="alt img/Title; src string:${img/absolute_url}/@@images/image/project_thumb; height string:160; width string:${width}; title string: ${project/title} - ${project/description}" />
+                    <a href="SimonEse_.jpg/image_project_large" tal:attributes="title img/Title; href string:${img/getURL}/@@images/image/project_large">
+                      <img src="#" alt="SimonEse" class="hidden"
+                    tal:attributes="alt img/Title; height string:160; width string:${width}; title string: ${project/title} - ${project/description}" />
 
                     </a>
                 </tal:repimg>
