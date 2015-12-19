@@ -14,7 +14,6 @@
     <div class="container" id="body-core">
 
         <div class="tiles row pat-masonry" data-pat-masonry="gutter: 0px; item-selector: .tile;">
-          <h1>Here be fotos</h1>
           <div class="columns item" tal:repeat="photographer view/photographers"><a href="${photographer/getURL}"><img tal:attributes="alt photographer/Title; src string:${photographer/getURL}/@@images/image/mini;"/></a></div>
       </div>
 
