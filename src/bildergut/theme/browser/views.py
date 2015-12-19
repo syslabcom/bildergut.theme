@@ -3,6 +3,8 @@ from Products.Five import BrowserView
 from plone.app.layout.viewlets.common import ViewletBase
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from random import shuffle
+from plone import api
+from smtplib import SMTPRecipientsRefused
 
 
 class ProjectOverviewView(BrowserView):
@@ -62,6 +64,26 @@ class ProjectOverviewView(BrowserView):
 
         shuffle(projects)
         return projects
+
+
+class ContactsView(BrowserView):
+
+    mailtext = ViewPageTemplateFile("templates/mailtext.pt")
+    index = ViewPageTemplateFile("templates/contacts.pt")
+
+    def __call__(self):
+        if self.request.REQUEST_METHOD == 'POST':
+            try:
+                mail_host = api.portal.get_tool(name='MailHost')
+                mail_host.send(self.mailtext(request=self.request,
+                                             charset='utf-8'),
+                               immediate=True)
+            except SMTPRecipientsRefused:
+                # Don't disclose email address on failure
+                raise SMTPRecipientsRefused('Recipient address rejected')
+            return self.request.RESPONSE.redirect("feedback")
+        else:
+            return self.index()
 
 
 class ClientsView(BrowserView):

@@ -1,0 +1,13 @@
+<tal:root define="lt string:&lt;;
+                  gt string:&gt;;
+                  dummy python:request.RESPONSE.setHeader('Content-Type', 'text/plain;; charset=%s' % options['charset']);"
+>From: "Bildergut.com Website" <span tal:replace="structure lt"/>post@bildergut.com<span tal:replace="structure gt"/>
+To: "Bildergut.com Team" <span tal:replace="structure lt"/>pilz@syslab.com<span tal:replace="structure gt"/>
+Subject: Anfrage von bildergut.com
+Content-Type: text/plain; charset=<span tal:replace="python:options['charset']" />
+
+Name: <span tal:replace="python:request['name']" />
+Email: <span tal:replace="python:request['email']" />
+Message: <span tal:replace="python:request['message']" />
+
+</tal:root>

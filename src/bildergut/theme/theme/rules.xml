@@ -65,6 +65,12 @@
       <replace css:content-children="#content-core" css:theme-children="#body-core" />
     </rules>
 
+    <rules css:if-content="body.section-feedback">
+      <theme href="generated/about.html" />
+      <replace css:content-children="#content-core" css:theme-children="#body-core" />
+    </rules>
+
+
   </rules>
 
 </rules>

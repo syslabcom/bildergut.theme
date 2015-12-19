@@ -9995,7 +9995,7 @@ form select {
   box-sizing: border-box;
   padding: 0.2em 0.5em;
   margin: -0.2em 0;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(200, 200, 200, 0.15);
   border: none;
   color: inherit;
   font-size: 100%;
@@ -10006,19 +10006,19 @@ form select {
   form input::-webkit-input-placeholder,
   form textarea::-webkit-input-placeholder,
   form select::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.6); }
+    color: rgba(66, 66, 66, 0.6); }
   form input::-moz-placeholder,
   form textarea::-moz-placeholder,
   form select::-moz-placeholder {
-    color: rgba(255, 255, 255, 0.6); }
+    color: rgba(66, 66, 66, 0.6); }
   form input:-ms-input-placeholder,
   form textarea:-ms-input-placeholder,
   form select:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.6); }
+    color: rgba(66, 66, 66, 0.6); }
   form inputinput:-moz-placeholder,
   form textareainput:-moz-placeholder,
   form selectinput:-moz-placeholder {
-    color: rgba(255, 255, 255, 0.6); }
+    color: rgba(66, 66, 66, 0.6); }
 
 .global-nav {
   background: white;
@@ -10767,6 +10767,9 @@ p {
 
 .hidden {
   display: none; }
+
+#contact-form {
+  margin: 2em 0; }
 
 .pat-masonry .columns {
   margin-bottom: 0.5em;
