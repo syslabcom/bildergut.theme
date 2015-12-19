@@ -38,7 +38,7 @@
                 </a>
                 <tal:repimg repeat="img python:imgs[1:]">
                     <a href="SimonEse_.jpg/image_project_large" tal:attributes="title img/Title; href string:${img/getURL}/@@images/image/project_large">
-                      <img src="#" alt="SimonEse" class="hidden"
+                      <img src="#" alt="SimonEse" class="hidden" style="display:none"
                     tal:attributes="alt img/Title; height string:160; width string:${width}; title string: ${project/title} - ${project/description}" />
 
                     </a>

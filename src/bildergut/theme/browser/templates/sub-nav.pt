@@ -1,4 +1,4 @@
-    <div class="subnav pat-bumper"
+    <div class="subnav pat-bumper" style="display:none"
          tal:define="portal context/portal_url/getPortalObject;
                      portal_url portal/absolute_url">
         <nav class="container navigation tabs">
