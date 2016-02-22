@@ -6,7 +6,7 @@
               <a href="${portal_url}/about">ABOUT</a>
               <a href="${portal_url}/contact">CONTACT</a>
               <a href="${portal_url}/clients">CLIENTS</a>
-              <a href="${portal_url}/photographers">PHOTOGRAPHERS</a>
+              <!--a href="${portal_url}/photographers">PHOTOGRAPHERS</a-->
               <a href="${portal_url}/imprint">IMPRINT</a>
         </nav>
     </div>
