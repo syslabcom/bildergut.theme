@@ -62,7 +62,8 @@ class ProjectOverviewView(BrowserView):
                          imgs=imgobs,
                          width=width))
 
-        shuffle(projects)
+        if not self.request.get('cat', None):
+            shuffle(projects)
         return projects
 
 
