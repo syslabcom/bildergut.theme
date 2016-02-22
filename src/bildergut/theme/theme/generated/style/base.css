@@ -10813,3 +10813,12 @@ span.social-media a img {
     border-bottom: 1px solid gray; } }
 #footer {
   margin: 0 2em; }
+
+.pswp__button--arrow--left, .pswp__button--arrow--right {
+  top: 0;
+  margin-top: 0;
+  width: 300px;
+  height: 100%; }
+
+.pswp__button--arrow--left:before, .pswp__button--arrow--right:before {
+  top: 50%; }

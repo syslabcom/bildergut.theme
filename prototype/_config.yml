@@ -3,7 +3,7 @@ author: "Kern & Kern"
 domain: www.bildergut.com
 media: /media
 markdown: kramdown
-permalink: /:title
+permalink: /:title.html
 sass:
   # style: :compressed
   load_paths:
